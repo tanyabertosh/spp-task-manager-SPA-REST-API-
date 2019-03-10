@@ -1,0 +1,147 @@
+h1 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 15px;
+} 
+
+th {
+  font-weight: 700;
+  text-align: left;
+  border-bottom: solid 1px #cccccc;
+  padding: 5px 0;
+}
+
+td {
+  vertical-align: middle;
+  height: 34px;
+  padding: 10px;
+  border-bottom: solid 1px #f1f1f1;
+}
+
+.background {
+  font-weight: 700;
+  vertical-align: middle;
+  position: relative;
+  color: #ffffff;
+}
+.background a {
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+}
+.background__pass {
+  background-color: #78b943 !important;
+}
+.background__fail {
+  background-color: #c3002f !important;
+}
+.background__reviewed {
+  background-color: #e28648 !important;
+}
+.background__running {
+  padding: 0;
+  /* Progress Bar */
+}
+.background__running .progress {
+  position: relative;
+  height: 44px;
+  display: block;
+  width: 100%;
+  background-color: #06acc0;
+  overflow: hidden;
+}
+.background__running .progress .indeterminate {
+  background-color: #0596a7;
+}
+.background__running .progress .indeterminate:before {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left, right;
+  animation: indeterminate 3.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+.background__running a {
+  display: block;
+  position: absolute;
+  height: 34px;
+  top: 11px;
+  width: 100%;
+  line-height: 1;
+  left: 10px;
+}
+
+@-webkit-keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+
+.header {
+  cursor: pointer;
+}
+
+#myInput {
+  margin-left: 30px;
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable td {
+  text-align: left; /* Left-align text */
+  margin: 12px; /* Add margin */
+}
+
+#myTable th {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd; 
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+
+/*# sourceMappingURL=style.css.map */

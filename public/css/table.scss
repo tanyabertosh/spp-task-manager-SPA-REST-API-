@@ -1,0 +1,134 @@
+
+$gray-light: #cccccc;
+$gray: #f1f1f1;
+$teal: #26a69a;
+$black: #000000;
+$white: #ffffff;
+$dark-teal: #064f55;
+$green: #3c763d;
+$teal: #0596a7;
+$lime: #78b943;
+$yellow: #f7dd02;
+$orange: #e28648;
+$red: #c3002f;
+
+body {
+  font-family: Open Sans, San-Serif;
+  font-size: 16px;
+  color: #595959;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+th {
+  font-weight: 700;
+  text-align: left;
+  border-bottom: solid 1px $gray-light;
+  padding: 5px 0;
+}
+
+td {
+  vertical-align: middle;
+  height: 34px;
+  padding: 10px;
+  border-bottom: solid 1px $gray;
+}
+
+.background {
+  font-weight: 700;
+  vertical-align: middle;
+  position: relative;
+  color: $white;
+  a {
+    color: $white;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__pass {
+    background-color: $lime !important;
+  }
+  &__fail {
+    background-color: $red !important;
+  }
+
+  &__reviewed {
+    background-color: $orange !important;
+  }
+  &__running {
+    padding: 0;
+    /* Progress Bar */
+    .progress {
+      position: relative;
+      height: 36px;
+      display: block;
+      width: 100%;
+      background-color: lighten($teal, 5%);
+      overflow: hidden;
+
+      .indeterminate {
+        background-color: $teal;
+
+        &:before {
+          content: "";
+          position: absolute;
+          background-color: inherit;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          will-change: left, right;
+          animation: indeterminate 3.1s cubic-bezier(0.65, 0.815, 0.735, 0.395)
+            infinite;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      position: absolute;
+      height: 34px;
+      top: 11px;
+      width: 100%;
+      line-height: 1;
+      left: 10px;
+    }
+  }
+}
+
+@-webkit-keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+
+
+  
+  
